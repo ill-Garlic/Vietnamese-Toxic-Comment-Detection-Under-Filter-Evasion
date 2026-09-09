@@ -1,0 +1,39 @@
+﻿# Data & models
+data/raw/*
+!data/raw/.gitkeep
+
+data/interim/*
+!data/interim/.gitkeep
+
+data/processed/*
+!data/processed/.gitkeep
+
+data/perturbed/*
+!data/perturbed/.gitkeep
+!data/perturbed/test_perturbed/
+data/perturbed/test_perturbed/*
+!data/perturbed/test_perturbed/.gitkeep
+
+models/*
+!models/.gitkeep
+!models/svm/
+!models/phobert/
+models/svm/*
+!models/svm/.gitkeep
+models/phobert/*
+!models/phobert/.gitkeep
+models/**/*.bin
+models/**/*.safetensors
+*.pkl
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
