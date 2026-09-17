@@ -1,0 +1,38 @@
+# ==== SEED ĐÃ KHÓA (Quy trình v1.0 §8) ====
+# Không có split_seed vì cả 2 bộ dữ liệu đều dùng split chính thức
+seeds:
+  model: [42, 43, 44]     # 3 seed cho mô hình có tính ngẫu nhiên
+  attack: 2026            # seed sinh tập biến đổi kiểm thử
+
+# ==== ĐƯỜNG DẪN ====
+paths:
+  raw_vihsd: "data/raw/vihsd"
+  raw_victsd: "data/raw/ViCTSD"
+  processed: "data/processed"
+  perturbed: "data/perturbed/test_perturbed"
+  results: "results"
+  models: "models"
+  logs: "logs"
+
+# ==== ÁNH XẠ NHÃN ĐỘC HẠI / KHÔNG ĐỘC HẠI (§4) ====
+# Dùng để tính Recall nội dung độc hại và ASR
+harmful_mapping:
+  vihsd:
+    harmful: ["OFFENSIVE", "HATE"]
+    non_harmful: ["CLEAN"]
+  victsd:
+    harmful: ["TOXIC"]
+    non_harmful: ["NONE"]
+
+# ==== ĐỊNH NGHĨA BIẾN ĐỔI (§6) ====
+attacks:
+  types: ["A1", "A2", "A3"]
+  severities:
+    S1: 0.10
+    S2: 0.20
+    S3: 0.30
+  min_token_len:
+    A1: 3
+    A2: 4
+    A3: 3
+  separators: [" ", ".", "-", "_"]
