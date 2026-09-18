@@ -62,4 +62,9 @@ Bảng tổng hợp F1-score và % performance degradation giữa baseline và a
 
 ## License
 
-MIT License (hoặc điều chỉnh theo yêu cầu của bạn).
+## Quy ước nhãn
+
+- **ViHSD**: 0 = CLEAN, 1 = OFFENSIVE, 2 = HATE
+- **UIT-ViCTSD**: 0 = NONE, 1 = TOXIC
+- Nhóm "độc hại" dùng cho các chỉ số Recall/ASR: ViHSD = {1, 2}; ViCTSD = {1}
+  (xem `configs/config.yaml` → `harmful_mapping`)

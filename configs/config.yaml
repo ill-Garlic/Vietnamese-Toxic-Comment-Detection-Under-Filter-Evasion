@@ -18,11 +18,11 @@ paths:
 # Dùng để tính Recall nội dung độc hại và ASR
 harmful_mapping:
   vihsd:
-    harmful: ["OFFENSIVE", "HATE"]
-    non_harmful: ["CLEAN"]
+    harmful: [1, 2]       # 1 = OFFENSIVE, 2 = HATE
+    non_harmful: [0]      # 0 = CLEAN
   victsd:
-    harmful: ["TOXIC"]
-    non_harmful: ["NONE"]
+    harmful: [1]          # 1 = TOXIC
+    non_harmful: [0]      # 0 = NONE
 
 # ==== ĐỊNH NGHĨA BIẾN ĐỔI (§6) ====
 attacks:
